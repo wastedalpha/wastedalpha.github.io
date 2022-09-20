@@ -8,7 +8,7 @@ var homeArray = ['nope, wrong', 'Obviously not', 'come ooooon', 'hahah try again
   "WTF", "it's friday mate", "unacceptable", "🤨", "got something better to do?",
    "no mints on tonight", "😲", "you're killing me here", "loser", "why"];
 
-var bubbleHeight = 70;
+var bubbleHeight = 30;
 var vw = window.innerWidth;
 var vh = window.innerHeight;
 var width = 100;
@@ -39,7 +39,7 @@ function createBubble(option) {
   var element = document.createElement("div");
   document.body.appendChild(element);
   element.className = "bubble";
-  element.style.height = bubbleHeight + "px";
+  //element.style.height = bubbleHeight + "px";
   element.textContent = choose(option);
 
   return {
