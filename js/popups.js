@@ -1,6 +1,12 @@
 
-var clubArray = ['ew why', 'uh you sure mate', "dressed like that?!", "no chance", "can't afford entry", "lol good luck", "they don't accept $ETH", "at your age?!", "nice try degen", "music sounds awful"];
-var homeArray = ['nope, wrong', 'Obviously not loser', 'come ooooon', 'hahah try again', 'no chance', 'dweeeeb', "it's 9pm wtf", "she changed the locks dude", "boring", "WTF", "it's friday dude", "unacceptable"];
+var clubArray = ['ew why', 'uh you sure mate', "dressed like that?!",
+ "no chance", "can't afford entry", "lol good luck", "they don't accept $ETH",
+  "at your age?", "nice try degen", "music sounds awful", "😂", "wrong",
+   "pick again", "bouncer looks scary", "not feeling it", "looks dead", "£20 entry?!"];
+var homeArray = ['nope, wrong', 'Obviously not', 'come ooooon', 'hahah try again',
+ 'no chance', 'dweeeeb', "it's 9pm wtf", "she changed the locks dude", "boring",
+  "WTF", "it's friday mate", "unacceptable", "🤨", "got something better to do?",
+   "no mints on tonight", "😲", "you're killing me here", "loser", "why"];
 
 var bubbleHeight = 70;
 var vw = window.innerWidth;
