@@ -116,12 +116,11 @@ li a:hover {
 
 .bubble {
   height: 40px;
-  line-height: 40px;
   font-weight: bold;
   position: absolute;
   left: 0px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.0);
   color: white;
   border-radius: 10px;
   opacity: 1;

@@ -74,6 +74,7 @@ function animateBubble(bubble) {
     .add("leave", "+=" + random(5, 10))
     .add(function() { bubble.placed = false; }, "leave") // When bubble is leaving, it is no longer placed
     .to(bubble.element, random(0.5, 2), { autoAlpha: 0, y: -vh }, "leave");
+    tl.timeScale(100)
 }
 
 function createBubble(index) {

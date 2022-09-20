@@ -1,6 +1,6 @@
 
-var clubArray = ['Ew why', 'Lol you sure mate?!', "Should've dressed up a bit surely"];
-var homeArray = ['Nope, wrong', 'Obviously not loser', 'Come ooooon'];
+var clubArray = ['ew why', 'uh you sure mate', "dressed like that?!", "no chance", "can't afford entry", "lol good luck", "they don't accept $ETH", "at your age?!", "nice try degen", "music sounds awful"];
+var homeArray = ['nope, wrong', 'Obviously not loser', 'come ooooon', 'hahah try again', 'no chance', 'dweeeeb', "it's 9pm wtf", "she changed the locks dude", "boring", "WTF", "it's friday dude", "unacceptable"];
 
 var bubbleHeight = 70;
 var vw = window.innerWidth;
@@ -78,10 +78,10 @@ placeBubble(bubble)
   });
 
   var tl = new TimelineLite({ onComplete: placeBubble, onCompleteParams: [bubble] })
-    .to(bubble.element, random(0.5, 2), { autoAlpha: 1, y: bubble.top, ease: elastic }, random(10))
-    .add("leave", "+=" + random(5, 10))
+    .to(bubble.element, random(0.5, 2), { autoAlpha: 1, y: bubble.top, ease: elastic }, 0.1)
+    .add("leave", "+=" + 0)
     .add(function() { bubble.placed = false; }, "leave") // When bubble is leaving, it is no longer placed
-    .to(bubble.element, random(0.5, 2), { autoAlpha: 0, y: -vh }, "leave");
+    .to(bubble.element, 1, { autoAlpha: 0, y: -vh }, "leave");
 }
 
 function animateHomeBubble(){
