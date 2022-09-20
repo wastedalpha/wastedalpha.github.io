@@ -124,6 +124,7 @@ li a:hover {
   border-radius: 10px;
   opacity: 1;
   will-change: transform;
+  font-style: italic;
 }
 
 .mac-button {

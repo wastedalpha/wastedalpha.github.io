@@ -1,12 +1,18 @@
 
 var clubArray = ['ew why', 'uh you sure mate', "dressed like that?!",
  "no chance", "can't afford entry", "lol good luck", "they don't accept $ETH",
-  "at your age?", "nice try degen", "music sounds awful", "😂", "wrong",
-   "pick again", "bouncer looks scary", "not feeling it", "looks dead", "£20 entry?!"];
+  "at your age?", "nice try degen", "music sounds awful", "wrong",
+   "pick again", "bouncer looks scary", "not feeling it", "looks dead",
+    "£20 entry?!", "no thanks", "poor choice", "nah", "please no",
+     "reconsider", "hard pass", "dat alleyway tho..", "you're barred remember?",
+   "no gremlins allowed", "can we not?"];
 var homeArray = ['nope, wrong', 'Obviously not', 'come ooooon', 'hahah try again',
  'no chance', 'dweeeeb', "it's 9pm wtf", "she changed the locks dude", "boring",
-  "WTF", "it's friday mate", "unacceptable", "🤨", "got something better to do?",
-   "no mints on tonight", "😲", "you're killing me here", "loser", "why"];
+  "WTF", "it's friday mate", "unacceptable", "got something better to do?",
+   "no mints on tonight", "you're killing me here", "loser", "why",
+    "buddy...", "seriously?", "no way", "the night's young", "absolutely not",
+     "PSHHH", "veto", "mmmmnah", "hard pass", "what's down there?", "already?!",
+   "no bevs at home", "no way"];
 
 var bubbleHeight = 30;
 var vw = window.innerWidth;
@@ -68,7 +74,7 @@ function placeBubble(bubble) {
   bubble.placed = true;
   bubble.width  = width;
   bubble.left   = randomInt(pad, vw - (bubble.width + pad));
-  bubble.top    = randomInt(pad, vh - (bubble.height + pad));
+  bubble.top    = randomInt(pad+(vh*0.1), vh - (bubble.height + pad) - (vh*0.3));
   bubble.right  = bubble.left + bubble.width;
   bubble.bottom = bubble.top  + bubble.height
 }
@@ -85,7 +91,7 @@ placeBubble(bubble)
 
   var tl = new TimelineLite({ onComplete: placeBubble, onCompleteParams: [bubble] })
     .to(bubble.element, random(0.5, 2), { autoAlpha: 1, y: bubble.top, ease: elastic }, 0.1)
-    .add("leave", "+=" + 0)
+    .add("leave", "+=" + 1)
     .add(function() { bubble.placed = false; }, "leave") // When bubble is leaving, it is no longer placed
     .to(bubble.element, 1, { autoAlpha: 0, y: -vh }, "leave");
 }
