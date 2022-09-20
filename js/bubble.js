@@ -12,6 +12,7 @@ var elastic = Elastic.easeOut.config(0.3, 0.3);
 
 var bubbles = [];
 
+
 for (var i = 0; i < 200; i++) {
   var bubble = createBubble(i);
   bubbles.push(bubble);

@@ -4,7 +4,6 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 	<style>
-	p { max-width: 656px}
 	body {
 	  background: url("./images/homebg.png");
 		background-size: cover;
@@ -23,13 +22,13 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta property="og:title" content="home | Wasted Alpha" />
+			<meta property="og:title" content="Home | Wasted Alpha" />
 		<meta property="og:type" content="website" />
-					<meta property="og:description" content="Home of the BitDaemon NFT project and the DaemonDAO" />
+					<meta property="og:description" content="Begin your Wasted Alpha adventure..." />
 				<meta property="og:url" content="index.html" />
 					<meta property="og:image:secure_url" content="./images/daemon_cheers.png" />
 				    <meta name="generator" content="GravCMS" />
-    <meta name="description" content="Home of the BitDaemon NFT project and the DaemonDAO" />
+    <meta name="description" content="Begin your Wasted Alpha adventure..." />
 
 	<link rel="icon" type="image/png" href="./images/daemon_favicon.png" />
 	<link rel="canonical" href="index.html" />
@@ -39,8 +38,10 @@
 <link href="./css/main.css" type="text/css" rel="stylesheet">
 
 </head>
-<script src="js/bubble.js"></script>
 
+
+
+<!--header containing buttons-->
 <body id="top">
 	<ul>
 	  <li>	<a class="big-icon" href="index.html">
@@ -54,17 +55,27 @@
 				</a></li></li>
 	</ul>
 
+	<!--row of buttons-->
 <div class="content-row">
 <div class="button-row">
-	<button onclick="placeBubble()">Hit the club</button>
-	<button>Explore the alleyway</button>
-	<button onclick="myFunction()">Head home</button>
+	<p><a class="mac-button" onclick="createClubBubble()">Hit the club</a></p>
+	<p><a class="mac-button" onclick="createClubBubble()">Explore the alleyway</a></p>
+	<p><a class="mac-button" onclick="createClubBubble()">Head home</a></p>
+
+	<!--<button class=buttoner ><h3>Hit the club</h3></button>
+	<button class=buttoner >Explore the alleyway</button>
+	<button class=buttoner onclick="createHomeBubble()">Head home</button>
+-->
 </div>
 </div>
+
+
+<!--footer with text-->
 <div class="footer">
 	<h3>Made with ♥ by <a href="https://twitter.com/luciano_nft">LuckyLuciano</a> of <a href="https://bitdaemons.space/">BitDaemons</a> 👹</h3>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<!--Custom Script-->
+<script src="js/popups.js"></script>
 </html>
