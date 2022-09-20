@@ -1,4 +1,4 @@
-h3 {}
+h3 {color: white;}
 
 h2 {
   color: black;
@@ -136,12 +136,12 @@ li a:hover {
   border-image: url("../images/button1.png") 7 fill repeat;
   color: #000;
   text-decoration: none;
-  padding: 1px 2px 0 2px;
+  padding: 1px 1px 1px 1px;
   text-align: center;
 }
-.mac-button:link, .mac-button:visited, .mac-button:active, .mac-button:hover {
+.mac-button:hover {
   color: #fff !important;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 500;
   cursor: pointer;
 }

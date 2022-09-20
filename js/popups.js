@@ -43,17 +43,9 @@ function createBubble(option) {
     height: bubbleHeight,
     left: 0,
     top: 0,
-    right: minWidth,
+    right: width,
     bottom: bubbleHeight
   };
-  //placebubble
-  bubble.width  = bubble.width;
-  bubble.left   = randomInt(pad, vw - (width + pad));
-  bubble.top    = randomInt(pad, vh - (bubble.height + pad));
-  bubble.right  = bubble.left + bubble.width;
-  bubble.bottom = bubble.top  + bubble.height;
-
-  animateBubble(bubble)
 
 }
 
@@ -65,7 +57,19 @@ function createHomeBubble(){
   createBubble('home');
 }
 
-function animateBubble(bubble) {
+function placeBubble(bubble) {
+
+  bubble.placed = true;
+  bubble.width  = width;
+  bubble.left   = randomInt(pad, vw - (bubble.width + pad));
+  bubble.top    = randomInt(pad, vh - (bubble.height + pad));
+  bubble.right  = bubble.left + bubble.width;
+  bubble.bottom = bubble.top  + bubble.height
+}
+
+function animateBubble(option) {
+var bubble = createBubble(option)
+placeBubble(bubble)
 
   TweenLite.set(bubble.element, {
     width: bubble.width,
@@ -80,8 +84,23 @@ function animateBubble(bubble) {
     .to(bubble.element, random(0.5, 2), { autoAlpha: 0, y: -vh }, "leave");
 }
 
+function animateHomeBubble(){
+  animateBubble('home');
+}
+
+function animateClubBubble(){
+  animateBubble('club');
+}
+
+
 function randomInt(min, max) {
   if (max == null) { max = min; min = 0; }
   if (min > max) { var tmp = min; min = max; max = tmp; }
   return Math.floor(min + (max - min + 1) * Math.random());
+}
+
+function random(min, max) {
+  if (max == null) { max = min; min = 0; }
+  if (min > max) { var tmp = min; min = max; max = tmp; }
+  return min + (max - min) * Math.random();
 }
