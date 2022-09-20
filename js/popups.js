@@ -5,14 +5,17 @@ var clubArray = ['ew why', 'uh you sure mate', "dressed like that?!",
    "pick again", "bouncer looks scary", "not feeling it", "looks dead",
     "£20 entry?!", "no thanks", "poor choice", "nah", "please no",
      "reconsider", "hard pass", "dat alleyway tho..", "you're barred remember?",
-   "no gremlins allowed", "can we not?"];
+   "no gremlins allowed", "can we not?", "worst night of my life in there",
+ "friends don't let friends go in there", "I've got a better idea...",
+ "trust me, bad idea", "anywhere but there"];
 var homeArray = ['nope, wrong', 'Obviously not', 'come ooooon', 'hahah try again',
  'no chance', 'dweeeeb', "it's 9pm wtf", "she changed the locks dude", "boring",
   "WTF", "it's friday mate", "unacceptable", "got something better to do?",
    "no mints on tonight", "you're killing me here", "loser", "why",
     "buddy...", "seriously?", "no way", "the night's young", "absolutely not",
      "PSHHH", "veto", "mmmmnah", "hard pass", "what's down there?", "already?!",
-   "no bevs at home", "no way"];
+   "no bevs at home", "no way", "why are you like this", "don't be a melt",
+   "friends don't let friends go home", "I've got a better idea..."];
 
 var bubbleHeight = 30;
 var vw = window.innerWidth;
