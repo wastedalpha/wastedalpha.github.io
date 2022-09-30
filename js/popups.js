@@ -17,6 +17,8 @@ var homeArray = ['nope, wrong', 'Obviously not', 'come ooooon', 'hahah try again
    "no bevs at home", "no way", "why are you like this", "don't be a melt",
    "friends don't let friends go home", "I've got a better idea..."];
 
+   var rightArray = ["no way", "looks creepy over there", ""];
+
 var bubbleHeight = 30;
 var vw = window.innerWidth;
 var vh = window.innerHeight;
