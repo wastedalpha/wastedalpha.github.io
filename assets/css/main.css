@@ -97,7 +97,7 @@ input, select, textarea {
 		background-size: 100% 30em, auto;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
-		color: #696969;
+		color: #f7f7f7;
 		font-weight: 300;
 		line-height: 2.25em;
 	}
@@ -116,7 +116,7 @@ input, select, textarea {
 	input, select, textarea {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
-		color: #696969;
+		color: #ffffff;
 		font-weight: 300;
 		line-height: 2.25em;
 	}
@@ -131,7 +131,7 @@ input, select, textarea {
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #444;
+		color: #ffffff;
 		font-weight: 800;
 	}
 
@@ -1634,7 +1634,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #0090c5;
+		background: #black;
 		color: #fff;
 		text-decoration: none;
 		border-radius: 6px;
@@ -1661,7 +1661,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #10a0d5;
+			background: rgba(0, 0, 0, 0.8);
 		}
 
 		input[type="button"]:active,
@@ -1779,7 +1779,7 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #fff;
+		background: rgba(0, 0, 0, 0.7);
 		border-radius: 6px;
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 		padding: 2em;
@@ -1916,7 +1916,7 @@ input, select, textarea {
 	}
 
 	#main-wrapper {
-		background: #fff;
+		background: rgba(0, 0, 0, 0.7);
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 		padding: 5em 0 5em 0;
 	}
@@ -2372,7 +2372,7 @@ input, select, textarea {
 						position: absolute;
 						left: 6px;
 						top: 6px;
-						background: rgba(0, 0, 0, 0.5);
+						background: rgba(0, 0, 0, 0.9);
 						width: 58px;
 						height: 38px;
 						border-radius: 6px;
@@ -2408,7 +2408,7 @@ input, select, textarea {
 				top: 0;
 				width: 275px;
 				z-index: 10002;
-				background: #fff;
+				background: #rgba(0,0,0, 0.9);
 				box-shadow: inset -3px 0px 0px 0px #dfdfdf;
 				padding: 0 23px 0 20px;
 			}
@@ -2419,7 +2419,7 @@ input, select, textarea {
 					height: 54px;
 					line-height: 54px;
 					border-top: solid 1px #e8e8e8;
-					color: #696969;
+					color: #fff;
 				}
 
 					#navPanel .link:first-child {
