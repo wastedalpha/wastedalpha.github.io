@@ -243,6 +243,7 @@ input, select, textarea {
 
 		.row > * {
 			box-sizing: border-box;
+
 		}
 
 		.row.gtr-uniform > * > :last-child {
@@ -295,6 +296,7 @@ input, select, textarea {
 
 		.row > .col-3 {
 			width: 25%;
+			background: rgba(0,0,0,0.6)
 		}
 
 		.row > .off-3 {
@@ -2594,6 +2596,7 @@ input, select, textarea {
 						}
 
 		/* Widgets */
+
 
 			.widget.thumbnails .image {
 				margin: 0;
