@@ -95,10 +95,10 @@ input, select, textarea {
 		background-position: top left, top left;
 		background-repeat: repeat-x, repeat;
 		background-size: 100% 30em, auto;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'CH_Light', sans-serif;
 		font-size: 13pt;
 		color: #f7f7f7;
-		font-weight: 300;
+		font-weight: 1000;
 		line-height: 2.25em;
 	}
 
@@ -2689,3 +2689,20 @@ input, select, textarea {
 			}
 
 	}
+
+
+	@font-face {
+  font-family: 'CH_Med';
+  src: url('../fonts/CooperHewitt-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+font-family: 'CH_Light';
+src: url('../fonts/CooperHewitt-Light.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
