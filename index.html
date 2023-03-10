@@ -1,94 +1,330 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-	<style>
-	body {
-	  background: url("./images/homebg.png");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center;
-		min-height: 100%;
-		margin: 0;
-	  font-size: 12px;
-		font-family: ocraextended;
-}
-
-	</style>
-	<meta charset="utf-8" />
-	<title>Home | Wasted Alpha</title>
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta property="og:title" content="Home | Wasted Alpha" />
-		<meta property="og:type" content="website" />
-					<meta property="og:description" content="Begin your Wasted Alpha adventure..." />
-				<meta property="og:url" content="index.html" />
-					<meta property="og:image:secure_url" content="./images/WA_icon.png.png" />
-				    <meta name="generator" content="GravCMS" />
-    <meta name="description" content="Begin your Wasted Alpha adventure..." />
-
-	<link rel="icon" type="image/png" href="./images/WA_icon.png" />
-	<link rel="canonical" href="index.html" />
-
-
-
-<link href="./css/main.css" type="text/css" rel="stylesheet">
-
-</head>
-
-
-
-<!--header containing buttons-->
-<body id="top">
-	<div class="preloader" style="display:flex" class="pre-load">
-		<img src="./images/WA_icon.png" loading="lazy" height="400" alt="tarakudo loading icon"/>
-	</div>
-
-	<ul>
-	  <li>	<a class="big-icon" href="https://twitter.com/bitdaemons" target="_blank" rel="noreferrer noopener">
-					<img src="./images/twitter-white.png" alt="twitter" />
-				</a></li>
-	  <li><a class="big-icon" href="https://discord.com/invite/h2wEqVgpBD" target="_blank" rel="noreferrer noopener">
-					<img src="./images/discord-white.png" alt="discord" />
-				</a></li>
-		<li><a class="big-icon" href="https://instagram.com/bitdaemons" target="_blank" rel="noreferrer noopener">
-					<img src="./images/instagram-white.png" alt="instagram" />
-				</a></li>
-		<li><a class="big-icon" href="https://opensea.io/" target="_blank" rel="noreferrer noopener">
-					<img src="./images/opensea-white.png" alt="opensea" />
-				</a></li>
-	  <li style="float:right"><a class="big-icon" href="index.html">
-					<img src="./images/restart-white.png" alt="restart" />
-				</a></li></li>
-
-	</ul>
-
-	<!--row of buttons-->
-<div class="content-row">
-<div class="button-row">
-	<h3><a class="mac-button" onclick="animateClubBubble()">Hit club</a></h3>
-	<h3><a class="mac-button" href="alleyway.html">Explore alleyway</a></h3>
-	<h3><a class="mac-button" onclick="animateHomeBubble()">Head home</a></h3>
-
-	<!--<button class=buttoner ><h3>Hit the club</h3></button>
-	<button class=buttoner >Explore the alleyway</button>
-	<button class=buttoner onclick="createHomeBubble()">Head home</button>
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-</div>
-</div>
+<html>
+	<head>
+		<title>Wasted Alpha Collective</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+		body {
+			background: url("./images/homebg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			min-height: 100%;
+			margin: 0;
+			font-size: 12px;
+			font: 'CH_Med';
+	}
 
+		</style>
+	</head>
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
 
-<!--footer with text-->
-<div class="footer">
-	<a>Made with ♥ by <a href="https://twitter.com/luciano_nft">LuckyLuciano</a> of <a href="https://bitdaemons.space/">BitDaemons</a> 👹</a>
-</div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-<!--Custom Script-->
-<script src="js/popups.js"></script>
-<script src="js/main.js"></script>
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<img href="index.html" src="images/WA_icon_white.png" width=20%></img>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="index.html">HOME</a></li>
+									<li>
+										<a href="#">SOCIALS</a>
+										<ul>
+											<li><a href="https://twitter.com/wasted_alpha">Twitter</a></li>
+											<li><a href="https://discord.gg/NV2ae8BhSa">Discord</a></li>
+										</ul>
+									</li>
+									<li><a href="#">TEAM</a>
+										<ul>
+											<li><a href="https://twitter.com/kaspasejo">Kaspasejo</a></li>
+											<li><a href="https://twitter.com/DrGonzoFTM">DrGonzo</a></li>
+											<li><a href="https://twitter.com/ted_ftm_maxi">TedNVX</a></li>
+											<li><a href="https://twitter.com/spearheadirl">Spearhead</a></li>
+											<li><a href="https://twitter.com/teensonacid">TeensOnAcid</a></li>
+											<li><a href="https://twitter.com/arcayn_nft">ArcAyn</a></li>
+											<li><a href="https://twitter.com/luciano_nft">Lucky</a></li>
+										</ul>
+
+									</li>
+									<li><a href="no-sidebar.html">ADVENTURE</a></li>
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Banner -->
+				<div id="banner-wrapper">
+					<div id="banner" class="box container">
+						<div class="row">
+							<div class="col-7 col-12-medium">
+								<h2><img src="images/WA_textstacked_white.png" width=80%><img></h2>
+								<h1></h1>
+							</div>
+							<div class="col-5 col-12-medium">
+								<ul>
+									<li><a href="#" class="button large icon solid fa-arrow-circle-right">Jump to mint</a></li>
+									<!--<li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="banner" class="box container">
+					<div class="row">
+						<div class="col-5 col-12-medium">
+							<h2><img src="images/OMERTA_white.png" width=80%><img></h2>
+							<p></p>
+						</div>
+						<div class="col-7 col-12-medium">
+							<h3>Omertà is the genesis collection of the Wasted Alpha collective. 1500 digital character collectibles, each entitling the holder to claim a bottle of award-winning Irish Whiskey.</h3>
+							<h3>Meet the three families below:</h3>
+						</div>
+					</div>
+				</div>
+
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/bruisebros.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>The Bruise Bros</h2>
+												<p>by Teens on Acid</p>
+											</header>
+											<p>Killers for hire, torn between duty and past.</p>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/cosadaemostra.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>The Cosa Daemostra</h2>
+												<p>by BitDaemons</p>
+											</header>
+											<p>Spaceborne syndicate, predating mankind.</p>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/lostsoulz.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>The Lost Soulz</h2>
+												<p>by Spearhead</p>
+											</header>
+											<p>Undead brotherhood, loyalty and sacrifice. </p>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<div id="sidebar">
+										<section class="widget thumbnails">
+											<h3>Interesting stuff</h3>
+											<div class="grid">
+												<div class="row gtr-50">
+													<div class="col-6"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
+													<div class="col-6"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
+													<div class="col-6"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
+													<div class="col-6"><a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a></div>
+												</div>
+											</div>
+											<a href="#" class="button icon fa-file-alt">More</a>
+										</section>
+									</div>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<div id="content">
+										<section class="last">
+											<h2>The Mint</h2>
+											<p>minter will go here</p>
+											<a href="#" class="button icon solid fa-arrow-circle-right">Continue Reading</a>
+										</section>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/kaspasejo_pfp.jpeg" width=40%/>
+										<h3>Kaspasejo</h3>
+										<ul class="style2">
+											<li><h1>Head honcho</h1></li>
+											<li><h1>Blockchain bootlegger</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/gonzo_pfp.jpeg" width=40%/>
+										<h3>Dr Gonzo</h3>
+										<ul class="style2">
+											<li><h1>Beverage specialist</h1></li>
+											<li><h1>Legend chronicler</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/teens_pfp.jpeg" width=40%/>
+										<h3>TeensOnAcid</h3>
+										<ul class="style2">
+											<li><h1>AcidVerse architect</h1></li>
+											<li><h1>Hated bruiser</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/spearhead_pfp.jpeg" width=40%/>
+										<h3>Spearhead</h3>
+										<ul class="style2">
+											<li><h1>Shadowcrafter</h1></li>
+											<li><h1>Whiskey slammer</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/lucky_pfp.png" width=40%/>
+										<h3>LuckyLuciano</h3>
+										<ul class="style2">
+											<li><h1>Pixel popper</h1></li>
+											<li><h1>Bread breaker</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/arcayn_pfp.png" width=40%/>
+										<h3>ArcAyn</h3>
+										<ul class="style2">
+											<li><h1>Daemon glitcher</h1></li>
+											<li><h1>Pint-can slinger</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/ted_pfp.png" width=40%/>
+										<h3>TedNVX</h3>
+										<ul class="style2">
+											<li><h1>Solidity sorceror</h1></li>
+											<li><h1>Bytecode bandito</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Contact -->
+									<section class="widget contact last">
+										<h3>Contact Us</h3>
+										<ul>
+											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										</ul>
+										<p>Omertà Inc.<br />
+										Three Families Blvd.<br />
+										(+800) 01-21-do-1</p>
+									</section>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>Forked with ❤️ by LuckyLuciano of BitDaemons 👹</li><li>Graphic design by Kaspasejo</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
