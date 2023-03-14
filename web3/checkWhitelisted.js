@@ -14,3 +14,9 @@ export function getProof(address) {
   const kekked = keccak256(address);
   return merkleTree.getHexProof(kekked);
 }
+
+export function isWhitelisted(address) {
+  const hexProof = getProof(address);
+  const rootHash = merkleTree.getRoot();
+  return merkleTree.verify(hexProof, claimingAddress, rootHash)
+}
