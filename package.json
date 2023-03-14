@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/wastedalpha/wastedalpha.github.io/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/wastedalpha/wastedalpha.github.io#readme",
   "dependencies": {
     "keccak256": "^1.0.6",

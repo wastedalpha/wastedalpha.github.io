@@ -1,6 +1,6 @@
 import keccak256 from "keccak256";
 import { MerkleTree } from "merkletreejs";
-import { whitelistAddresses } from "./.whitelistedAddresses";
+import whitelistAddresses from "./.whitelistedAddresses.js";
 
 const leafNodes = whitelistAddresses.map((addr) => keccak256(addr));
 const merkleTree = new MerkleTree(leafNodes, keccak256, { sortPairs: true });
@@ -10,13 +10,11 @@ export function getMerkleRoot() {
 }
 
 // Get proof per wallet:
+
+// IMPORTANT: @luckyluciano , if this returns an empty array, the user is not verified to whitelist, call mint() instead with no proof attached.
 export function getProof(address) {
   const kekked = keccak256(address);
   return merkleTree.getHexProof(kekked);
 }
 
-export function isWhitelisted(address) {
-  const hexProof = getProof(address);
-  const rootHash = merkleTree.getRoot();
-  return merkleTree.verify(hexProof, claimingAddress, rootHash)
-}
+console.log(getProof("0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2"));
