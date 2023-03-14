@@ -183,7 +183,43 @@
 									<div id="content">
 										<section class="last">
 											<h2>The Mint</h2>
-											<button onclick="mint()">Mint</button>
+											<div class="mint-wrapper" style="margin-bottom: 10px;">
+												<div>
+													{totalMinted}/{totalSupply}
+												</div>
+												...
+												<br />
+												Insert some art here
+												<br />
+												...
+												<br />
+												
+												<div class="handle-wrapper" style="padding-bottom: 20px;">
+													<button class="value-change-button">
+													  -
+													</button>
+													<div>
+													  <span>{mintQuantity}</span>
+													</div>
+													<button class="value-change-button">
+													  +
+													</button>
+												</div>
+
+												<button onclick="mint()" class="mintButton" name="Mint">
+													Mint
+												</button>
+												<h3>
+													Price = 0.1 ETH
+													<br />
+													WL Price = 0.075 ETH
+													<br />
+													MAX PER TX = 5
+												</h3>
+												<h3>
+													All transactions are <u>final</u>
+												</h3>
+											</div>
 										</section>
 									</div>
 

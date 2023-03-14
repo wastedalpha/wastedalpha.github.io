@@ -1,6 +1,47 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
+@import url("https://fonts.cdnfonts.com/css/cursed-timer-ulil");
+@import url("https://fonts.cdnfonts.com/css/joystix");
 
+.mint-wrapper {
+	text-align: center;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+}
+
+.handle-wrapper {
+	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+	margin-top: 6;
+	margin-bottom: 2;
+}
+.value-change-button {
+	background-color: black;
+	border: solid 1px white;
+	max-width: 100px;
+	align-items: center;
+	text-align: center;
+}
+.sevenSegment {
+  font-family: "Cursed Timer ULiL", sans-serif;
+}
+
+.joystix {
+  font-family: "Joystix", sans-serif;
+}
+
+.mintButton {
+  color: white;
+  max-width: 200px;
+  align-self: center;
+  justify-content: center;
+  background-color: black;
+  border: solid 1px white;
+  display: flex;
+  transition: color 0.2s, border 0.2s, background-color 0.2s;
+}
 /*
 	Verti by HTML5 UP
 	html5up.net | @ajlkn

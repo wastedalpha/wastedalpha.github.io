@@ -81,9 +81,6 @@ li a:hover {
 }
 
 
-
-
-}
 .big-icon {
 	width: 100px;
   text-decoration: none;
@@ -151,9 +148,9 @@ li a:hover {
   border-style: solid;
   border-width: 7px;
   background-image: url("../images/button1.png")
-  text-decoration: none;
+  /* text-decoration: none;
   padding: 1px 2px 0 2px;
-  text-align: center;
+  text-align: center; */
 }
 .buttoner:link, .mac-button:visited, .mac-button:active, .mac-button:hover {
   color: #000 !important;
