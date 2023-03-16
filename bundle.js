@@ -3054,10 +3054,10 @@ async function isWL(){
   let proof = getProof(selectedAccount);
   let bool;
   if (proof.length > 0){
-    bool = True;
+    bool = 1;
   }
   else {
-    bool = False;
+    bool = 0;
   }
   return bool;
 }
@@ -3066,7 +3066,7 @@ async function checkWL(){
 
   let bool = isWL();
 
-  if (bool) {
+  if (bool == 1) {
     document.getElementById("wl-status").innerHTML = "<h3>WL STATUS: ✅👍🥂</h3>";
   }
   else {
