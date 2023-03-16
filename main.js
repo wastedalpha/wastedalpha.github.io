@@ -355,13 +355,13 @@ async function isWL(){
   else {
     bool = 0;
   }
-  console.log(`bool = ${bool}`)
   return bool;
 }
 
 async function checkWL(){
 
-  let bool = isWL();
+  let bool = await isWL();
+  console.log(`bool_in = ${bool}`);
 
   if (bool == 1) {
     document.getElementById("wl-status").innerHTML = "<h3>WL STATUS: ✅👍🥂</h3>";
