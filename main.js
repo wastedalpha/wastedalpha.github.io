@@ -143,7 +143,7 @@ async function fetchAccountData() {
   var dots ="…";
   var endString = selectedAccount.substring(selectedAccount.length - 3)
   var display = startString+dots+endString;
-  document.getElementById("addWallet").innerHTML = display;
+  document.getElementById("addWallet").innerHTML = display.toUpperCase();
 }
 
 /**
