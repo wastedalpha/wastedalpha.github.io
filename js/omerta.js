@@ -53,12 +53,12 @@ async function addNetwork(id) {
     case 7700:
       networkData = [
         {
-          chainId: "0xFA2",
-          chainName: "FTM Testnet",
-          rpcUrls: ["https://canto.slingshot.finance"],
+          chainId: "0xfa2",
+          chainName: "Fantom Testnet",
+          rpcUrls: ["https://rpc.testnet.fantom.network/"],
           nativeCurrency: {
-            name: "testFantom",
-            symbol: "tFTM",
+            name: "Fantom",
+            symbol: "FTM",
             decimals: 18,
           },
           blockExplorerUrls: ["https://testnet.ftmscan.com/"],
