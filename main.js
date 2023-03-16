@@ -181,7 +181,7 @@ async function onConnect() {
     return;
   }
 
-  await swapChain("0x1e14", 7700);
+  await swapChain("0xfa2", 4002); //SWAP FOR ETH MAINNET
 
   fetchAccountData();
 
