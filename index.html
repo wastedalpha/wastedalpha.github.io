@@ -26,7 +26,23 @@
 		</style>
 	</head>
 	<body class="is-preload homepage">
+		<div class="mac-icons">
+			<div id="prepare">
+				<button id="btn-connect" class="big-icon">
+					<img src="./images/MMdark.png" alt="connect" />
+					<span>CONNECT</span>
+				</button>
+			</div>
+			<div id="connected" style="display: none">
+				<button id="btn-disconnect" class="big-icon">
+					<img src="./images/MMconnected.png" alt="connected" />
+					<span id="addWallet">DISCONNECT</span>
+				</button>
+			</div>
+		</div>
 		<div id="page-wrapper">
+
+
 
 			<!-- Header -->
 				<div id="header-wrapper">
@@ -69,6 +85,7 @@
 
 			<!-- Banner -->
 				<div id="banner-wrapper">
+
 					<div id="banner" class="box container">
 						<div class="row">
 							<div class="col-7 col-12-medium">
@@ -183,9 +200,7 @@
 										<section class="last">
 											<h2>The Mint</h2>
 											<div class="mint-wrapper" style="margin-bottom: 10px;">
-												<h3>
-													{totalMinted}/{totalSupply}
-												</h3 >
+
 												<h3>...
 													<br />
 													Insert some art here
@@ -194,20 +209,23 @@
 													<br />
 												</h3>
 												<div class="handle-wrapper" style="padding-bottom: 20px;">
-													<button class="value-change-button">
+													<button class="value-change-button" id="quant-minus">
 													  -
 													</button>
-													<div>
-													  <h3>{mintQuantity}</h3>
-													</div>
-													<button class="value-change-button">
+													<div class="quantity-display" id='quantNFT'>1</div>
+													<button class="value-change-button" id="quant-plus">
 													  +
 													</button>
 												</div>
 
 												<button onclick="mint()" class="mintButton" name="Mint">
-													Mint
+													MINT
 												</button>
+												<div class="number-of-nfts-minted">
+                				<p class="number-minted" id="count">0000</p>
+                				<p class="divider">/</p>
+                				<p class="total-number-of-nfts" id="total">1500</p>
+              					</div>
 												<h3>
 													Price = 0.1 ETH
 													<br />
@@ -328,10 +346,8 @@
 									<section class="widget contact last">
 										<h3>Contact Us</h3>
 										<ul>
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+											<li><a href="https://twitter.com/wasted_alpha" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://discord.gg/NV2ae8BhSa" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
 										</ul>
 										<p>Omertà Inc.<br />
 										Three Families Blvd.<br />
@@ -364,6 +380,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="js/omerta.js"></script>
 
 	</body>
 </html>
