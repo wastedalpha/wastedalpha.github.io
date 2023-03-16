@@ -134,6 +134,7 @@ async function fetchAccountData() {
   selectedAccount = accounts[0];
   console.log("Selected Account is", selectedAccount);
 
+  await checkWL();
   // Display fully loaded UI for wallet data
   document.querySelector("#prepare").style.display = "none";
   document.querySelector("#connected").style.display = "block";
@@ -199,7 +200,7 @@ async function onConnect() {
   provider.on("networkChanged", (networkId) => {
     fetchAccountData();
   });
-await checkWL();
+
 }
 
 // "disconnect button"
