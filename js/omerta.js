@@ -254,12 +254,12 @@ async function fetchStartTime() {
   saleStart = await tokenContract.methods.showStart().call();
 }
 
-// Update the count down every 1 second
+// Update the count down every 5 seconds
 // rewritten to web2 => web3 via contract abi... using FTM for the web3
 // all contracts will have same datum
 window.setInterval(async () => {
   setTheNumbers();
-}, 1000);
+}, 5000);
 
 // web3 call() for how many have minted on that contract
 async function queryMinted() {
@@ -276,9 +276,9 @@ async function queryMinted() {
 async function fetchMintFee(){
   const web3 = new Web3(rpc);
   let NFTContract = await new web3.eth.Contract(ABI, CA);
-  let value = await NFTContract.methods.minterFees().call();
+  let value = await NFTContract.methods.price().call();
   if(!value){
-    console.error("Can not fetch minterFees() on contract");
+    console.error("Can not fetch price() on contract");
     return 0;
   }
   return value;
@@ -295,28 +295,23 @@ async function mintNFT() {
   let quant = parseInt(document.getElementById('quantNFT').innerHTML);
   mintFees = await fetchMintFee();
   let value = quant * mintFees;
-  var timeMeow = new Date().getTime();
-  timeMeow = parseInt(timeMeow/1000);
 
-  if (timeMeow >= saleStart) {
-    const web3 = new Web3(provider);
-    let tdContract = await new web3.eth.Contract(ABI, CA);
-    let mintIt = tdContract
-                   .methods
-                   .publicMint(quant)
-                   .send({ from: selectedAccount, value: value})
-                   .on(
-                     'transactionHash',
-                     function(hash) {
-                       console.log(`publicMint(${quant})`, hash);
+  const web3 = new Web3(provider);
+  let tdContract = await new web3.eth.Contract(ABI, CA);
+  let mintIt = tdContract
+                  .methods
+                  .publicMint(quant)
+                  .send({ from: selectedAccount, value: value})
+                  .on(
+                    'transactionHash',
+                    function(hash) {
+                    console.log(`publicMint(${quant})`, hash);
                      }
                    );
     if (!mintIt) {
       console.log(`Failed publicMint(${quant})`);
     }
-  } else {
-    console.log('Too soon junior, is it now',timeMeow,'and the mint is at',saleStart);
-  }
+
 }
 
 async function plusQuant(){
