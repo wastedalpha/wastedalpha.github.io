@@ -50,7 +50,7 @@ async function addNetwork(id) {
   let networkData;
   switch (id) {
     //Fantom
-    case 7700:
+    case 4002:
       networkData = [
         {
           chainId: "0xfa2",
