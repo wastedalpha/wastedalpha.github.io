@@ -25,10 +25,10 @@ const rpc = 'https://rpc.testnet.fantom.network/';
 // after window is loaded completely (load screen)
 window.onload = function(){
   //hide the preloader
-  $(".preloader").fadeOut(1000);
-  setTimeout(() => {
-    document.querySelector(".preloader").style.display = "none";
-  }, 1000);
+  //$(".preloader").fadeOut(1000);
+  //setTimeout(() => {
+  //  document.querySelector(".preloader").style.display = "none";
+  //}, 1000);
 
   setTheNumbers();
 }
@@ -259,63 +259,18 @@ async function fetchStartTime() {
 // all contracts will have same datum
 window.setInterval(async () => {
   setTheNumbers();
-  // Get today's date and time in seconds
-  var timeMeow = new Date().getTime();
-  timeMeow = parseInt(timeMeow/1000);
-
-  // 2 html id's to replace
-  var showText;
-  var buttonText;
-
-  // set the variables
-  if (saleStart > timeMeow) {
-    showText = "Mint live in: ";
-    buttonText = "Not Active";
-  } else {
-    showText = "Mint active: ";
-    buttonText = "Mint";
-  }
-
-  // Find the distance between now and the count down date
-  var distance = saleStart - timeMeow;
-
-  if (distance > 0) {
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (60 * 60 * 24));
-    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
-    var minutes = Math.floor((distance % (60 * 60)) / (60));
-    var seconds = Math.floor(distance % 60);
-
-    // Display the results in the elements
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    document.getElementById("clockText").innerHTML = showText;
-    document.getElementById("buttonText").innerHTML = buttonText;
-  } else {
-    // Display the "null" results in the elements
-    document.getElementById("demo").innerHTML = " ";
-    document.getElementById("clockText").innerHTML = " ";
-    document.getElementById("buttonText").innerHTML = "Mint";
-  }
 }, 1000);
 
 // web3 call() for how many have minted on that contract
 async function queryMinted() {
   const web3 = new Web3(rpc);
   let tokenContract = await new web3.eth.Contract(ABI, CA);
-  let value = await tokenContract.methods.minterMinted().call();
+  let value = await tokenContract.methods.totalSupply().call();
   console.log(value, "has been minted");
   return value;
 }
 
-// web3 call() for how many allowed to mint on that contract
-async function queryAlloted() {
-  const web3 = new Web3(rpc);
-  let tokenContract = await new web3.eth.Contract(ABI, CA);
-  let value = await tokenContract.methods.minterCapacity().call();
-  console.log(value, "to mint on this chain");
-  return value;
-}
+
 
 // cost per mint in ETH
 async function fetchMintFee(){
@@ -332,14 +287,12 @@ async function fetchMintFee(){
 // puts the above together with innerHTML rewrite could go innerTEXT as well
 async function setTheNumbers() {
   let theCount = await queryMinted();
-  let theTotal = await queryAlloted();
   document.getElementById("count").innerHTML = theCount;
-  document.getElementById("total").innerHTML = theTotal;
 }
 
 
 async function mintNFT() {
-  let quant = $('#quantNFT').val();
+  let quant = parseInt(document.getElementById('quantNFT').innerHTML);
   mintFees = await fetchMintFee();
   let value = quant * mintFees;
   var timeMeow = new Date().getTime();
@@ -367,22 +320,26 @@ async function mintNFT() {
 }
 
 async function plusQuant(){
-  let oldQuant = $('#quantNFT').val();
+  let oldQuant = parseInt(document.getElementById('quantNFT').innerHTML);
+  console.log(`old quantity is ${oldQuant}`);
+  let newQuant;
   if (oldQuant < 5) {
-    let newQuant = oldQuant + 1;}
+    newQuant = oldQuant + 1;}
   else {
-    let newQuant = oldQuant;
+    newQuant = oldQuant;
   }
   console.log(`new quantity is ${newQuant}`);
   document.getElementById("quantNFT").innerHTML = newQuant;
 }
 
 async function minusQuant(){
-  let oldQuant = $('#quantNFT').val();
+  let oldQuant = parseInt(document.getElementById('quantNFT').innerHTML);
+  console.log(`old quantity is ${oldQuant}`);
+  let newQuant;
   if (oldQuant > 1) {
-    let newQuant = oldQuant - 1;}
+    newQuant = oldQuant - 1;}
   else {
-    let newQuant = oldQuant;
+    newQuant = oldQuant;
   }
   console.log(`new quantity is ${newQuant}`);
   document.getElementById("quantNFT").innerHTML = newQuant;

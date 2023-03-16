@@ -2829,11 +2829,3 @@ input, select, textarea {
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-font-family: 'CH_Light';
-src: url('../fonts/CooperHewitt-Light.ttf') format('truetype');
-font-weight: 400;
-font-style: normal;
-font-display: swap;
-}
