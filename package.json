@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wastedalpha/wastedalpha.github.io#readme",
   "dependencies": {
     "keccak256": "^1.0.6",
-    "merkletreejs": "^0.3.9"
+    "merkletreejs": "^0.3.9",
+    "uniq": "^1.0.1"
   }
 }
