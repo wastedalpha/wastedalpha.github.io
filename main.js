@@ -347,6 +347,7 @@ async function isWL(){
   let proof = getProof(selectedAccount);
   console.log(`proof follows for account: ${selectedAccount}`)
   console.log(proof);
+  console.log(`proof length: ${proof.length}`)
   let bool;
   if (proof.length > 0){
     bool = 1;
