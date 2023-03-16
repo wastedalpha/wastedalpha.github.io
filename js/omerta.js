@@ -11,7 +11,6 @@
  * @author: Max Flow O2 -> @MaxFlowO2 on bird app/GitHub
  * @notice: web3.js file for wavedaemons.html
  */
-
 "use strict";
 // the wave daemons
 const CA = "0x8a4995448996c1c65eda73efec6cffda180a6e7e";
