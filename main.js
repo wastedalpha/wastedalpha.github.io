@@ -199,7 +199,7 @@ async function onConnect() {
   provider.on("networkChanged", (networkId) => {
     fetchAccountData();
   });
-
+await checkWL();
 }
 
 // "disconnect button"
@@ -267,7 +267,7 @@ async function queryMinted() {
   const web3 = new Web3(rpc);
   let tokenContract = await new web3.eth.Contract(ABI, CA);
   let value = await tokenContract.methods.totalSupply().call();
-  console.log(value, "has been minted");
+  //console.log(value, "has been minted");
   return value;
 }
 
@@ -299,9 +299,11 @@ async function mintNFT() {
 
   const web3 = new Web3(provider);
   let tdContract = await new web3.eth.Contract(ABI, CA);
+
+
   let mintIt = tdContract
                   .methods
-                  .publicMint(quant)
+                  .mint(quant)
                   .send({ from: selectedAccount, value: value})
                   .on(
                     'transactionHash',
@@ -330,15 +332,38 @@ async function plusQuant(){
 
 async function minusQuant(){
   let oldQuant = parseInt(document.getElementById('quantNFT').innerHTML);
-  console.log(`old quantity is ${oldQuant}`);
+  //console.log(`old quantity is ${oldQuant}`);
   let newQuant;
   if (oldQuant > 1) {
     newQuant = oldQuant - 1;}
   else {
     newQuant = oldQuant;
   }
-  console.log(`new quantity is ${newQuant}`);
+  //console.log(`new quantity is ${newQuant}`);
   document.getElementById("quantNFT").innerHTML = newQuant;
+}
+async function isWL(){
+  let proof = getProof(selectedAccount);
+  let bool;
+  if (proof.length > 0){
+    bool = True;
+  }
+  else {
+    bool = False;
+  }
+  return bool;
+}
+
+async function checkWL(){
+
+  let bool = isWL();
+
+  if (bool) {
+    document.getElementById("wl-status").innerHTML = "<h3>WL STATUS: ✅👍🥂</h3>";
+  }
+  else {
+    document.getElementById("wl-status").innerHTML = "<h3>WL STATUS: ❌🥺🙏</h3>";
+  }
 }
 
 // master event listener... combines all the shit above.
