@@ -31,7 +31,7 @@ window.onload = function(){
 
   setTheNumbers();
 }
-
+const getProof = require("../web3/checkWhitelisted")
 // Unpkg imports
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
@@ -294,7 +294,7 @@ async function mintNFT() {
   let quant = parseInt(document.getElementById('quantNFT').innerHTML);
   mintFees = await fetchMintFee();
   let value = quant * mintFees;
-
+  
   const web3 = new Web3(provider);
   let tdContract = await new web3.eth.Contract(ABI, CA);
   let mintIt = tdContract
@@ -348,3 +348,4 @@ window.addEventListener('load', async () => {
   document.querySelector("#quant-plus").addEventListener("click", plusQuant);
   document.querySelector("#quant-minus").addEventListener("click", minusQuant);
 });
+

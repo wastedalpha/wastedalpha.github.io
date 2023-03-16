@@ -12,7 +12,7 @@ export function getMerkleRoot() {
 // Get proof per wallet:
 
 // IMPORTANT: @luckyluciano , if this returns an empty array, the user is not verified to whitelist, call mint() instead with no proof attached.
-export function getProof(address) {
+export default function getProof(address) {
   const kekked = keccak256(address);
   return merkleTree.getHexProof(kekked);
 }
