@@ -3052,6 +3052,8 @@ async function minusQuant(){
 }
 async function isWL(){
   let proof = getProof(selectedAccount);
+  console.log(`proof follows for account: ${selectedAccount}`)
+  console.log(proof);
   let bool;
   if (proof.length > 0){
     bool = 1;
