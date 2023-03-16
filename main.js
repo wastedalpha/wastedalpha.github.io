@@ -297,11 +297,24 @@ async function mintNFT() {
   let quant = parseInt(document.getElementById('quantNFT').innerHTML);
   mintFees = await fetchMintFee();
   let value = quant * mintFees;
-
   const web3 = new Web3(provider);
   let tdContract = await new web3.eth.Contract(ABI, CA);
 
-
+  let wl = await isWL();
+  let proof = getProof(selectedAccount);
+  if (wl == 1){
+    let mintIt = tdContract
+                    .methods
+                    .whiteListMint(quant, proof)
+                    .send({ from: selectedAccount, value: value*0.75})
+                    .on(
+                      'transactionHash',
+                      function(hash) {
+                      console.log(`whitelistMint(${quant})`, hash);
+                       }
+                    );
+                  }
+  else {
   let mintIt = tdContract
                   .methods
                   .mint(quant)
@@ -312,8 +325,9 @@ async function mintNFT() {
                     console.log(`publicMint(${quant})`, hash);
                      }
                    );
+                }
     if (!mintIt) {
-      console.log(`Failed publicMint(${quant})`);
+      console.log(`Failed Mint(${quant})`);
     }
 
 }
