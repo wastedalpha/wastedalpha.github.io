@@ -3063,6 +3063,7 @@ async function isWL(){
   else {
     bool = 0;
   }
+  console.log(`bool = ${bool}`)
   return bool;
 }
 
