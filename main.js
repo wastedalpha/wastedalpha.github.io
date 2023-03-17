@@ -367,7 +367,6 @@ async function plusQuant(){
   else {
     newQuant = oldQuant;
   }
-  console.log(`new quantity is ${newQuant}`);
   document.getElementById("quantNFT").innerHTML = newQuant;
 }
 
@@ -385,9 +384,6 @@ async function minusQuant(){
 }
 async function isWL(){
   let proof = getProof(selectedAccount);
-  console.log(`proof follows for account: ${selectedAccount}`)
-  console.log(proof);
-  console.log(`proof length: ${proof.length}`)
   let bool;
   if (proof.length > 0){
     bool = 1;
@@ -401,7 +397,6 @@ async function isWL(){
 async function checkWL(){
 
   let bool = await isWL();
-  console.log(`bool_in = ${bool}`);
 
   if (bool == 1) {
     document.getElementById("wl-status").innerHTML = "<h3>WL STATUS: ✅👍🥂</h3>";
