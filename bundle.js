@@ -20517,9 +20517,15 @@ const whitelistAddresses = [
   "0x7d256df87cE7D803b464af34a82F5fe54437Ecd8",
   "0xBcd111829623ffC6074E3085cf13d9F9A873b033",
   "0xF754BFB09978C3E47512209A7c90fC517b51a8cB",
+  "0x73d3b5c0c04da5876242a32E03d21A1e3b4D9bFc",
+  "0x44cD1Eb889948CDb00c2B18eb5D064Acab745735",
+  "0x9320ED7B32db6156e68B8B5d118cc0475c488A57",
+  "0x8553E24b9eb99c21Ea96A3E167CF4B8c75fb345C",
+  "0xaB0fc831560D69E8A17292Db7F1A41409561644c",
+  "0x74f1934e59bC6fdB0Fd8cb19B231014f0BBd3cA5",
+  "0x986dc8a176d4c7f893cb9d4f681ffa492a5b8ad6",
 ];
 module.exports = whitelistAddresses;
-//export default whitelistAddresses;
 
 },{}],78:[function(require,module,exports){
 //import keccak256 from "keccak256";
