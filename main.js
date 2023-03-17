@@ -302,34 +302,60 @@ async function mintNFT() {
 
   let wl = await isWL();
   let proof = getProof(selectedAccount);
-  if (wl == 1){
-    let mintIt = tdContract
-                    .methods
-                    .whiteListMint(quant, proof)
-                    .send({ from: selectedAccount, value: value*0.75})
-                    .on(
-                      'transactionHash',
-                      function(hash) {
-                      console.log(`whitelistMint(${quant})`, hash);
-                       }
-                    );
-                  }
-  else {
-  let mintIt = tdContract
+  // if (wl == 1){
+  //   let mintIt = tdContract
+  //                   .methods
+  //                   .whiteListMint(quant, proof)
+  //                   .send({ from: selectedAccount, value: value*0.75})
+  //                   .on(
+  //                     'transactionHash',
+  //                     function(hash) {
+  //                     console.log(`whitelistMint(${quant})`, hash);
+  //                      }
+  //                   );
+  //                 }
+  // else {
+  // let mintIt = tdContract
+  //                 .methods
+  //                 .mint(quant)
+  //                 .send({ from: selectedAccount, value: value})
+  //                 .on(
+  //                   'transactionHash',
+  //                   function(hash) {
+  //                   console.log(`publicMint(${quant})`, hash);
+  //                    }
+  //                  );
+  //               }
+  //   if (!mintIt) {
+  //     console.log(`Failed Mint(${quant})`);
+  //   }
+  try {
+    if (wl == 1) {
+    await tdContract
                   .methods
-                  .mint(quant)
-                  .send({ from: selectedAccount, value: value})
+                  .whiteListMint(quant, proof)
+                  .send({ from: selectedAccount, value: value*0.75})
                   .on(
                     'transactionHash',
                     function(hash) {
-                    console.log(`publicMint(${quant})`, hash);
+                    console.log(`whitelistMint(${quant})`, hash);
                      }
-                   );
-                }
-    if (!mintIt) {
-      console.log(`Failed Mint(${quant})`);
-    }
-
+                  );
+  }else {
+    await tdContract
+                    .methods
+                    .mint(quant)
+                    .send({ from: selectedAccount, value: value})
+                    .on(
+                      'transactionHash',
+                      function(hash) {
+                      console.log(`publicMint(${quant})`, hash);
+                       }
+                     );
+                  }
+  } catch (error) {
+    console.log(error, `Failed Mint(${quant})`);
+  }
 }
 
 async function plusQuant(){
