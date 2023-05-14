@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Wasted Alpha Collective</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/png" href="./images/WA_icon_white.png" />
+		<style>
+			body {
+				background: url("./images/homebg-min.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: center;
+				min-height: 100%;
+				margin: 0;
+				font-size: 12px;
+				font: 'CH_Med';
+			}
+		</style>
+	</head>
+	<body class="is-preload homepage">
+		<div class="mac-icons">
+			<div id="prepare">
+				<button id="btn-connect" class="big-icon">
+					<img src="./images/MMdark.png" alt="connect" />
+					<span>CONNECT</span>
+				</button>
+			</div>
+			<div id="connected" style="display: none">
+				<button id="btn-disconnect" class="big-icon">
+					<img src="./images/MMconnected.png" alt="connected" />
+					<span id="addWallet">DISCONNECT</span>
+				</button>
+			</div>
+		</div>
+		<div id="page-wrapper">
+
+
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<img href="index.html" src="images/WA_icon_white.png" width=20%></img>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="index.html">HOME</a></li>
+									<li>
+										<a href="#">SOCIALS</a>
+										<ul>
+											<li><a href="https://twitter.com/wasted_alpha" target="_blank" rel="noreferrer noopener">Twitter</a></li>
+											<li><a href="https://discord.gg/NV2ae8BhSa" target="_blank" rel="noreferrer noopener">Discord</a></li>
+										</ul>
+									</li>
+									<li><a href="#">TEAM</a>
+										<ul>
+											<li><a href="https://twitter.com/kaspasejo" target="_blank" rel="noreferrer noopener">Kaspasejo</a></li>
+											<li><a href="https://twitter.com/DrGonzoFTM" target="_blank" rel="noreferrer noopener">DrGonzo</a></li>
+											<li><a href="https://twitter.com/ted_ftm_maxi" target="_blank" rel="noreferrer noopener">TedNVX</a></li>
+											<li><a href="https://twitter.com/spearheadirl" target="_blank" rel="noreferrer noopener">Spearhead</a></li>
+											<li><a href="https://twitter.com/teensonacid" target="_blank" rel="noreferrer noopener">TEENSONACID</a></li>
+											<li><a href="https://twitter.com/arcayn_nft" target="_blank" rel="noreferrer noopener">ArcAyn</a></li>
+											<li><a href="https://twitter.com/luciano_nft" target="_blank" rel="noreferrer noopener">Lucky</a></li>
+										</ul>
+
+									</li>
+									<li><a href="adventure.html">ADVENTURE</a></li>
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+				<!-- Main -->
+					<div id="main-wrapper">
+						<div class="container">
+							<div class="row gtr-200">
+								<div class="col-4 col-12-medium">
+
+									<!-- Sidebar -->
+										<div id="sidebar">
+											<section class="widget thumbnails">
+												<h2>The Booze</h2>
+												<p>
+													Each Omertà NFT entitles the holder to redeem a bottle of award winning Irish Whiskey,
+													with label art matching the bottle on their NFT, collaborative art tube casing and a certificate of authenticity.
+												</p>
+												<div class="grid">
+														<div class="col-6"><a href="#" class="image fit"><img src="images/thebottles.png" alt="" /></a></div>
+												</div>
+													<p>
+													Superb, triple distilled Irish whiskey, patiently aged 3 years in Bourbon casks with a Sherry cask finish to unlock the unique characteristics of the liquid.
+												</p>
+												<a href="#" class="button icon fa-file-alt">Distribution Info [COMING SOON]</a>
+											</section>
+										</div>
+
+								</div>
+								<div class="col-8 col-12-medium imp-medium">
+
+									<!-- Content -->
+										<div id="content">
+											<section class="last">
+												<div class="mint-wrapper" style="margin-bottom: 10px;">
+													<h3>
+													<img src="images/mintpromo.gif" alt="" width=50%></h3>
+													<div class="handle-wrapper" style="padding-bottom: 20px;">
+														<button class="value-change-button" id="quant-minus">
+															-
+														</button>
+														<div class="quantity-display" id='quantNFT'>1</div>
+														<button class="value-change-button" id="quant-plus">
+															+
+														</button>
+													</div>
+													<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+													<div class="elfsight-app-f677c342-5107-4634-b1e0-b1be25117d79"></div>
+
+													<button class="mintButton" name="Mint" id="btn-buyNFT">
+														MINT
+													</button>
+													<div class="number-of-nfts-minted">
+													<p class="number-minted" id="count">0000</p>
+													<p class="divider">/</p>
+													<p class="total-number-of-nfts" id="total">1500</p>
+													</div>
+													<p>
+														Price: 0.10 Ξ 🥃
+
+														WL: 0.075 Ξ 🥃
+
+														MAX PER TX: 5
+													</p>
+													<div id="wl-status">
+														<h3>WL STATUS: 🤔🤷‍♂️ [CONNECT ⤴️] </h3>
+													</div>
+												</div>
+											</section>
+										</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Banner -->
+				<div id="banner-wrapper">
+
+					<div id="banner" class="box container">
+						<div class="row">
+							<div class="col-7 col-12-medium">
+								<h2><img src="images/WA_textstacked_white.png" width=80%><img></h2>
+								<h1></h1>
+							</div>
+							<div class="col-5 col-12-medium">
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="banner" class="box container">
+					<div class="row">
+						<div class="col-5 col-12-medium">
+							<h2><img src="images/OMERTA_white.png" width=80%><img></h2>
+							<p></p>
+						</div>
+						<div class="col-7 col-12-medium">
+							<h3>Omertà is the genesis collection of the Wasted Alpha collective. 1500 digital character collectibles, each entitling the holder to claim a bottle of award-winning Irish Whiskey.</h3>
+							<h3>Meet the three families below:</h3>
+						</div>
+					</div>
+				</div>
+
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/bruisebros.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>The Bruise Bros 🍄👊</h2>
+												<p>by TEENSONACID</p>
+											</header>
+											<p>Killers for hire, torn between duty and past.</p>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/cosadaemostra.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>The Cosa Daemostra 👹🤌</h2>
+												<p>by BitDaemons</p>
+											</header>
+											<p>Spaceborne syndicate, predating mankind.</p>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/lostsoulz.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>The Lost Soulz ⚔️💀</h2>
+												<p>by Spearhead</p>
+											</header>
+											<p>Undead brotherhood, ready to riot. </p>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/kaspasejo_pfp.jpeg" width=40%/>
+										<h3>Kaspasejo</h3>
+										<ul class="style2">
+											<li><h1>Head honcho</h1></li>
+											<li><h1>Blockchain bootlegger</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/gonzo_pfp.jpeg" width=40%/>
+										<h3>Dr Gonzo</h3>
+										<ul class="style2">
+											<li><h1>Beverage specialist</h1></li>
+											<li><h1>Legend chronicler</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/teens_pfp.jpeg" width=40%/>
+										<h3>TEENSONACID</h3>
+										<ul class="style2">
+											<li><h1>AcidVerse architect</h1></li>
+											<li><h1>Hated bruiser</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/spearhead_pfp.jpeg" width=40%/>
+										<h3>Spearhead</h3>
+										<ul class="style2">
+											<li><h1>Shadowcrafter</h1></li>
+											<li><h1>Whiskey slammer</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/lucky_pfp.png" width=40%/>
+										<h3>LuckyLuciano</h3>
+										<ul class="style2">
+											<li><h1>Pixel popper</h1></li>
+											<li><h1>Bread breaker</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/arcayn_pfp.png" width=40%/>
+										<h3>ArcAyn</h3>
+										<ul class="style2">
+											<li><h1>Daemon glitcher</h1></li>
+											<li><h1>Pint-can slinger</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<img src="images/ted_pfp.png" width=40%/>
+										<h3>TedNVX</h3>
+										<ul class="style2">
+											<li><h1>Solidity sorceror</h1></li>
+											<li><h1>Bytecode bandito</h1></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Contact -->
+									<section class="widget contact last">
+										<h3>Contact Us</h3>
+										<ul>
+											<li><a href="https://twitter.com/wasted_alpha" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://discord.gg/NV2ae8BhSa" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+										</ul>
+										<p>Omertà Inc.<br />
+										Three Families Blvd.<br />
+										(+800) 01-21-do-1</p>
+									</section>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>Forked with ❤️ by <a href="https://twitter.com/luciano_nft" target="_blank" rel="noreferrer noopener">LuckyLuciano</a>
+											 of <a href="https://twitter.com/bitdaemons" target="_blank" rel="noreferrer noopener">BitDaemons</a> 👹</li>
+										<li>Graphic design by <a href="https://twitter.com/kaspasejo" target="_blank" rel="noreferrer noopener">Kaspasejo</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<!-- web3 adds -->
+			<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/web3modal@1.9.0/dist/index.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/fortmatic@2.0.6/dist/fortmatic.js"></script>
+			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+
+			<script src="bundle.js"></script>
+
+<!-- the custom script -->
+			<!--<script src="main.js"></script>-->
+
+
+	</body>
+</html>
